@@ -4,8 +4,12 @@ import { withTranslation } from 'react-i18next';
 import { Slide } from 'react-reveal';
 import loadable from '@loadable/component';
 
+
+// import logo from './paris.jpg';
+
 import * as S from './styles';
 
+// const Picture = loadable(() => import('../../../common/Picture'));
 const SvgIcon = loadable(() => import('../../../common/SvgIcon'));
 const Button = loadable(() => import('../../../common/Button'));
 
@@ -33,7 +37,7 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
                         key={id}
                         color={item.color}
                         width="true"
-                        onClick={() => scrollTo('about')}
+                        onClick={() => scrollTo('register')}
                       >
                         {t(item.title)}
                       </Button>
@@ -45,7 +49,9 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
         </Col>
         <Col lg={11} md={11} sm={12} xs={24}>
           <Slide right>
-            <SvgIcon src={icon} className="about-block-image" />
+          <div >
+          <img src={icon} width="100%"/>
+        </div>
           </Slide>
         </Col>
       </Row>

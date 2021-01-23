@@ -32,7 +32,7 @@ const Footer = ({ t }) => {
   return (
     <Fragment>
       <Fade bottom>
-        <S.Footer>
+        {/* <S.Footer>
           <Container>
             <Row type="flex" justify="space-between">
               <Col lg={10} md={10} sm={12} xs={24}>
@@ -104,7 +104,7 @@ const Footer = ({ t }) => {
               </Col>
             </Row>
           </Container>
-        </S.Footer>
+        </S.Footer> */}
         <S.Extra>
           <Container border="true">
             <Row
@@ -119,7 +119,10 @@ const Footer = ({ t }) => {
                 </S.LogoContainer>
               </S.NavLink>
               <S.FooterContainer>
-                <SocialLink
+              {/* <S.Large to="/">
+                  {t('Feito pelo Ricardo')}
+                </S.Large> */}
+                {/* <SocialLink
                   href="https://github.com/Adrinlol/create-react-app-adrinlol"
                   src="github.svg"
                 />
@@ -130,15 +133,15 @@ const Footer = ({ t }) => {
                 <SocialLink
                   href="https://www.linkedin.com/in/lasha-kakabadze/"
                   src="linkedin.svg"
-                />
-                <SocialLink
+                /> */}
+                {/* <SocialLink
                   href="https://github.com/Adrinlol/"
                   src="instagram.svg"
-                />
-                <SocialLink
+                /> */}
+                {/* <SocialLink
                   href="https://medium.com/@lashakakabadze/"
                   src="medium.svg"
-                />
+                /> */}
               </S.FooterContainer>
             </Row>
           </Container>

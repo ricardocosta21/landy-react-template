@@ -43,7 +43,7 @@ export const Target = styled.a`
 
 export const Extra = styled.section`
   background: rgb(249, 250, 252);
-  position: relative;
+  position: left;
   width: 100%;
   padding-right: 25px;
   padding-left: 25px;
@@ -110,8 +110,8 @@ export const Empty = styled.div`
 export const FooterContainer = styled.div`
   max-width: 510px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  
+  justify-content: center;
 
   @media screen and (max-width: 414px) {
     padding: 2rem 0;

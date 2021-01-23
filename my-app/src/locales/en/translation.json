@@ -1,5 +1,5 @@
 {
-  "About": "About",
+  "About": "Sobre",
   "Policy": "Policy",
   "Mission": "Mission",
   "Product": "Product",
@@ -14,15 +14,15 @@
   "ADDRESS": "ADDRESS",
   "Press": "Press",
   "Careers & Culture": "Careers & Culture",
-  "Language": "Language",
-  "Explore": "Explore",
-  "Learn More": "Learn More",
-  "Get Started": "Get Started",
-  "Submit": "Submit",
-  "Message" : "Message",
-  "Your Message": "Your Message",
-  "Name" : "Message",
-  "Your Name": "Your Name",
-  "Email" : "Message",
-  "Your Email": "Your Message"
+  "Language": "Linguagem",
+  "Explore": "Explorar",
+  "Learn More": "Saber mais",
+  "Get Started": "Vamos comecar",
+  "Submit": "Submeter",
+  "Message" : "Mensagem",
+  "Your Message": "A sua Mensagem",
+  "Name" : "Nome",
+  "Your Name": "O seu nome",
+  "Email" : "Email",
+  "Your Email": "O seu email"
 }

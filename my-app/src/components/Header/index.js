@@ -43,10 +43,10 @@ const Header = ({ t }) => {
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall
           style={{ width: '180px' }}
-          onClick={() => scrollTo('contact')}
+          onClick={() => scrollTo('register')}
         >
           <S.Span>
-            <Button>{t('Contact')}</Button>
+            <Button>{t('Registe-se')}</Button>
           </S.Span>
         </S.CustomNavLinkSmall>
       </Fragment>

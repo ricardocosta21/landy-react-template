@@ -65,6 +65,14 @@ const Styles = createGlobalStyle`
         text-align: center;
     }
 
+    map{
+        text-align: center;
+    }
+
+    .about-block-color {
+        color: rgb(255,130,92);
+    }
+
     .ant-drawer-body {
         display: flex;
         flex-direction: column;
