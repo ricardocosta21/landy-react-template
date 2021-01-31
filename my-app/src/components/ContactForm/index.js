@@ -14,9 +14,16 @@ const Button = loadable(() => import("../../common/Button"));
 const TextArea = loadable(() => import("../../common/TextArea"));
 
 const Contact = ({ title, content, id, t }) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
-
-  const [inputFields, setInputFields] = useState([{ fullName: "" }]);
+  const {
+    values,
+    errors,
+    inputList,
+    handleAddClick,
+    handleRemoveClick,
+    handleInputChange,
+    handleChange,
+    handleSubmit,
+  } = useForm(validate);
 
   const ValidationType = ({ type }) => {
     const ErrorMessage = errors[type];
@@ -29,23 +36,7 @@ const Contact = ({ title, content, id, t }) => {
     );
   };
 
-  const handleInputChange = (index, event) => {
-    const values = [...inputFields];
-    values[index].fullName = event.target.value;
-    setInputFields(values);
-  };
-
-  const handleAddFields = () => {
-    const values = [...inputFields];
-    values.push({ fullName: "" });
-    setInputFields(values);
-  };
-
-  const handleRemoveFields = (index) => {
-    const values = [...inputFields];
-    values.splice(index, 1);
-    setInputFields(values);
-  };
+  /// Stop here
 
   return (
     <S.ContactContainer id={id}>
@@ -56,18 +47,27 @@ const Contact = ({ title, content, id, t }) => {
           </Col>
           <Col lg={12} md={12} sm={24}>
             <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
+              {/* <Input
+                  type="text"
+                  name="name"
+                  id="Name"
+                  placeholder="Primeiro e Ultimo nome"
+                  value={values.name || ''}
+                  onChange={handleChange}
+                />
+                <ValidationType type="name" /> */}
+
               <Col span={24}>
-                {inputFields.map((inputField, index) => (
-                  <Fragment key={`${inputField}~${index}`}>
+                {inputList.map((x, index) => (
+                  <Fragment key={`${x}~${index}`}>
                     <div className="form-group col-sm-6">
                       <Input
                         type="text"
                         name="name"
                         id="Name"
                         placeholder="Primeiro e Ultimo nome"
-                        value={values.name || ""}
-                        onChange={handleChange}
-                        onChange={(event) => handleInputChange(index, event)}
+                        value={values.fullName || ""}
+                        onChange={(e) => handleInputChange(e, index)}
                       />
                       <ValidationType type="name" />
                     </div>
@@ -76,14 +76,14 @@ const Contact = ({ title, content, id, t }) => {
                       <button
                         className="btn btn-link"
                         type="button"
-                        onClick={() => handleRemoveFields(index)}
+                        onClick={() => handleRemoveClick(index)}
                       >
                         -
                       </button>
                       <button
                         className="btn btn-link"
                         type="button"
-                        onClick={() => handleAddFields()}
+                        onClick={() => handleAddClick()}
                       >
                         +
                       </button>
